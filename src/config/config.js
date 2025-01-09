@@ -2,5 +2,5 @@ import dotenv from 'dotenv';
 
 dotenv.config()
 
-const UNSPLASH_API_URL = process.env.UNSPLASH_API_URL;
-const UNSPLASH_KEY = process.env.UNSPLASH_KEY;
+const PIXABAY_API_URL = process.env.PIXABAY_API_URL;
+const PIXABAY_KEY = process.env.PIXABAY_KEY;

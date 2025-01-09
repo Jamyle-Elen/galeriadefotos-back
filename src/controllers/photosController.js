@@ -3,16 +3,12 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const UNSPLASH_API_URL = process.env.UNSPLASH_API_URL;
-const UNSPLASH_KEY = process.env.UNSPLASH_KEY;
+const PIXABAY_API_URL = process.env.PIXABAY_API_URL;
+const PIXABAY_KEY = process.env.PIXABAY_KEY;
 
 export const getPhotos = async (req, res) => {
     try {
-      const response = await axios.get(UNSPLASH_API_URL, {
-        headers: {
-          Authorization: `Client-ID ${UNSPLASH_KEY}`,
-        },
-      });
+      const response = await axios.get(`${PIXABAY_API_URL}?key=${PIXABAY_KEY}&q=beautiful+landscape&image_type=photo&orientation=horizontal&page=2&per_page=30`);
   
       const photos = response.data;
       res.json(photos);
